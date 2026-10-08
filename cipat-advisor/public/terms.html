@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco-Drip | Terms & Conditions</title>
+    <style>
+        :root {
+            --teal: #14b8a6;
+            --teal-dim: rgba(20, 184, 166, 0.1);
+            --bg: #020617;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', system-ui, sans-serif; cursor: none; }
+        body { background-color: var(--bg); color: var(--text-main); line-height: 1.8; overflow-x: hidden; }
+        
+        .cursor-dot, .cursor-outline {
+            position: fixed; top: 0; left: 0; transform: translate(-50%, -50%);
+            border-radius: 50%; z-index: 9999; pointer-events: none;
+        }
+        .cursor-dot { width: 8px; height: 8px; background-color: var(--teal); }
+        .cursor-outline { width: 40px; height: 40px; border: 2px solid rgba(20, 184, 166, 0.5); transition: width 0.2s, height 0.2s, background-color 0.2s; }
+        
+        .mouse-glow {
+            position: fixed; width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(20,184,166,0.05) 0%, transparent 60%);
+            border-radius: 50%; pointer-events: none; transform: translate(-50%, -50%); z-index: -1;
+        }
+
+        #progress-bar {
+            position: fixed; top: 0; left: 0; height: 4px;
+            background: var(--teal); width: 0%; z-index: 1000;
+        }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 80px 30px; }
+        header { text-align: center; margin-bottom: 60px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 40px; }
+        h1 { font-size: 3rem; font-weight: 900; font-style: italic; color: var(--teal); margin-bottom: 10px; }
+        .subtitle { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--text-muted); }
+
+        .section { margin-bottom: 40px; padding: 30px; background: rgba(255,255,255,0.02); border-radius: 20px; border-left: 4px solid var(--teal); }
+        h2 { font-size: 1.5rem; color: white; margin-bottom: 20px; display: flex; align-items: center; gap: 15px; }
+        h2 span { background: var(--teal-dim); color: var(--teal); padding: 5px 12px; border-radius: 8px; font-size: 0.9rem; }
+        
+        p, li { color: var(--text-muted); margin-bottom: 15px; }
+        ul { padding-left: 20px; margin-bottom: 20px; }
+        li::marker { color: var(--teal); }
+        strong { color: #e2e8f0; }
+
+        .btn-back {
+            display: flex; align-items: center; justify-content: center; gap: 10px; width: fit-content; margin: 40px auto; padding: 12px 30px;
+            background: rgba(255,255,255,0.05); color: var(--text-main); text-decoration: none; font-size: 0.9rem;
+            font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em;
+            border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); transition: all 0.2s; cursor: none;
+        }
+        .btn-back:hover { background: rgba(255,255,255,0.1); border-color: var(--teal); color: var(--teal); }
+    </style>
+</head>
+<body>
+    <div id="progress-bar"></div>
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+    <div class="mouse-glow" id="mouse-glow"></div>
+
+    <div class="container">
+        <header>
+            <h1>Terms of Service</h1>
+            <p class="subtitle">Effective Date: June 26, 2026</p>
+        </header>
+
+        <div class="section">
+            <h2><span>01</span> Acceptance of Terms</h2>
+            <p>By downloading, installing, or utilizing the EcoDrip application and its associated hardware integration protocols, you enter into a binding digital agreement with EcoDrip. If you do not agree to these Terms, you must immediately disconnect all IoT hardware modules from our servers and uninstall the application. These terms govern the use of our dashboard, AI features, and physical pump activation logic.</p>
+        </div>
+
+        <div class="section">
+            <h2><span>02</span> User Responsibilities & Hardware Security</h2>
+            <p>EcoDrip provides a bridge between software logic and physical high-voltage agricultural machinery. You are strictly responsible for:</p>
+            <ul>
+                <li>Ensuring all Arduino, ESP32, and relay modules are wired correctly by a certified electrician.</li>
+                <li>Calibrating your soil moisture and pH sensors. EcoDrip's logic is only as good as the raw analog data it receives.</li>
+                <li>Securing your Wi-Fi network. If a malicious actor gains access to your local network, they could theoretically trigger your water pumps indefinitely. You agree that EcoDrip is not liable for unauthorized local hardware breaches.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><span>03</span> AI Botanical Recommendations Disclaimer</h2>
+            <p>Our Neural Core features a sophisticated AI Botanist designed to analyze crop health, diagnose diseases via images, and recommend NPK (Nitrogen, Phosphorus, Potassium) adjustments. <strong>These recommendations are advisory only.</strong></p>
+            <p>Agriculture is a highly complex biological science influenced by hyper-local variables. You must not blindly apply chemical fertilizers or initiate extreme watering schedules based solely on an AI prompt. You maintain ultimate decision-making authority. EcoDrip assumes zero liability for crop degradation, yield loss, or soil contamination resulting from following AI advice.</p>
+        </div>
+
+        <div class="section">
+            <h2><span>04</span> Autonomous "Auto-Pilot" Irrigation</h2>
+            <p>By enabling the "Auto-Pilot" feature, you authorize EcoDrip servers to autonomously send activation commands to your physical water valves when moisture levels drop below your defined thresholds. You explicitly acknowledge that internet outages, server latency, or hardware sensor corrosion may cause Auto-Pilot to fail, resulting in underwatering or catastrophic flooding.</p>
+            <p>You agree to visually inspect your physical irrigation system at least once every 7 days when Auto-Pilot is engaged.</p>
+        </div>
+
+        <div class="section">
+            <h2><span>05</span> Prohibited Activities & Acceptable Use</h2>
+            <p>Your access to the EcoDrip Neural Core is a privilege. You agree NOT to:</p>
+            <ul>
+                <li>Reverse engineer, decompile, or attempt to extract the source code of the EcoDrip application or AI models.</li>
+                <li>Spoof IoT telemetry data by injecting fake sensor readings into our database, which destabilizes the global AI model.</li>
+                <li>Use the platform to automate the cultivation of illegal narcotics in jurisdictions where doing so violates local or federal law.</li>
+                <li>Launch Denial of Service (DoS) attacks against our edge servers or API endpoints.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><span>06</span> Service Availability & Uptime</h2>
+            <p>We strive to maintain a 99.9% uptime for the telemetry pipeline. However, EcoDrip relies on third-party cloud infrastructure (e.g., Supabase, Vercel) and internet service providers. We do not guarantee that the application will be online 100% of the time. In the event of a total server outage, your local IoT nodes must be programmed with a physical failsafe (e.g., an automatic shutoff timer on the Arduino itself) to prevent continuous pump operation.</p>
+        </div>
+
+        <div class="section">
+            <h2><span>07</span> Third-Party Weather Integration</h2>
+            <p>EcoDrip calculates the Evapotranspiration (ET) Index and executes "Rain Skips" based on data provided by external meteorological APIs (WeatherAPI, OpenWeatherMap). We do not warrant the accuracy of these third-party weather models. If a forecasted rainstorm fails to materialize and EcoDrip skipped a watering cycle, you are responsible for manually triggering the "Instant Boost" to hydrate your crops.</p>
+        </div>
+
+        <div class="section">
+            <h2><span>08</span> Limitation of Liability</h2>
+            <p>To the maximum extent permitted by applicable law, EcoDrip, its developers, and its affiliates shall not be liable for any indirect, incidental, special, consequential, or punitive damages. This includes, without limitation, loss of profits, crop yields, physical property damage due to water flooding, electrical fires caused by faulty relay wiring, or data loss resulting from your use of the platform. Total liability shall not exceed the amount you paid for the EcoDrip application over the past 12 months.</p>
+        </div>
+
+        <div class="section">
+            <h2><span>09</span> Indemnification</h2>
+            <p>You agree to defend, indemnify, and hold harmless EcoDrip against any claims, liabilities, damages, judgments, awards, losses, costs, or expenses (including reasonable attorneys' fees) arising out of your violation of these Terms or your use of the physical hardware integration in an unsafe manner that causes harm to a third party or property.</p>
+        </div>
+
+        <div class="section">
+            <h2><span>10</span> Governing Law & Dispute Resolution</h2>
+            <p>These Terms shall be governed and construed in accordance with the laws of your jurisdiction without regard to its conflict of law provisions. Any dispute arising from these Terms, the AI Botanical Advisor, or hardware integration failures must first be submitted to binding arbitration before initiating any formal court proceedings.</p>
+        </div>
+    </div>
+
+    <button class="btn-back" onclick="if(window.history.length > 1) { history.back(); } else { window.close(); }">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"></path><polyline points="12 19 5 12 12 5"></polyline></svg>
+        Back
+    </button>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            document.getElementById('progress-bar').style.width = (winScroll / height) * 100 + '%';
+        });
+
+        const dot = document.getElementById('cursor-dot');
+        const outline = document.getElementById('cursor-outline');
+        const glow = document.getElementById('mouse-glow');
+
+        window.addEventListener('mousemove', (e) => {
+            const posX = e.clientX, posY = e.clientY;
+            dot.style.left = `${posX}px`; dot.style.top = `${posY}px`;
+            outline.animate({ left: `${posX}px`, top: `${posY}px` }, { duration: 150, fill: "forwards" });
+            glow.style.left = `${posX}px`; glow.style.top = `${posY}px`;
+        });
+    </script>
+</body>
+</html>

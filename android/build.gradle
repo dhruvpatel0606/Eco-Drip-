@@ -1,0 +1,35 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.13.0'
+        classpath 'com.google.gms:google-services:4.4.4'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+apply from: "variables.gradle"
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    // Redirect build directory to avoid issues with OneDrive and node_modules on Windows
+    // Use a path outside of OneDrive to prevent sync conflicts and file locking
+    def userHome = System.getProperty("user.home")
+    buildDir = "${userHome}/.gradle-builds/Eco-Drip/${project.name}"
+}
+
+task clean(type: Delete) {
+    delete "${rootDir}/build"
+    def userHome = System.getProperty("user.home")
+    delete "${userHome}/.gradle-builds/Eco-Drip"
+}

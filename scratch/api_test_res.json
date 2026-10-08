@@ -1,0 +1,33 @@
+{
+  "name": "Apple (Generated)",
+  "nameHi": "Apple",
+  "nameGu": "Apple",
+  "category": "Fruit Tree",
+  "watering": {
+    "en": "Deep watering every 7-10 days, more frequent during fruit development.",
+    "hi": "हर 7-10 दिनों में गहरी सिंचाई, फल लगने के दौरान अधिक बार।",
+    "gu": "દર 7-10 દિવસે ઉંડુ પિયત, ફળ આવવા દરમિયાન વધુ વાર."
+  },
+  "difficulty": {
+    "en": "Moderate",
+    "hi": "मध्यम",
+    "gu": "મધ્યમ"
+  },
+  "family": {
+    "en": "Rosaceae",
+    "hi": "रोज़ेसी",
+    "gu": "રોઝેસી"
+  },
+  "light": {
+    "en": "Direct sunlight (8+ hours)",
+    "hi": "प्रत्यक्ष सूर्य प्रकाश",
+    "gu": "પ્રત્યક્ષ સૂર્ય પ્રકાશે"
+  },
+  "desc": {
+    "en": "A popular fruit tree species grown for agriculture or home gardening.",
+    "hi": "कृषि या घरेलू बागवानी के लिए उगाई जाने वाली एक लोकप्रिय Fruit Tree प्रजाति।",
+    "gu": "કૃષિ કે ઘરના બગીચા માટે ઉગાડવામાં આવતી એક લોકપ્રિય Fruit Tree પ્રજાતિ."
+  },
+  "npk": "10-10-10",
+  "pests": "Fruit flies, Aphids, Scale insects"
+}

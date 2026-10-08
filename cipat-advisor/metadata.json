@@ -1,0 +1,7 @@
+{
+  "name": "EcoDrip Smart Irrigation",
+  "description": "An AI-powered smart irrigation dashboard for optimized garden maintenance, featuring real-time soil monitoring, weather-based scheduling, and Gemini-driven plant care advice.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

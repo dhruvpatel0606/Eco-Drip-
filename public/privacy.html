@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco-Drip | Privacy Policy</title>
+    <style>
+        :root {
+            --emerald: #10b981;
+            --emerald-dim: rgba(16, 185, 129, 0.1);
+            --bg: #020617;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', system-ui, sans-serif; cursor: none; }
+        body { background-color: var(--bg); color: var(--text-main); line-height: 1.8; overflow-x: hidden; }
+        
+        .cursor-dot, .cursor-outline {
+            position: fixed; top: 0; left: 0; transform: translate(-50%, -50%);
+            border-radius: 50%; z-index: 9999; pointer-events: none;
+        }
+        .cursor-dot { width: 8px; height: 8px; background-color: var(--emerald); }
+        .cursor-outline { width: 40px; height: 40px; border: 2px solid rgba(16, 185, 129, 0.5); transition: width 0.2s, height 0.2s, background-color 0.2s; }
+        
+        .mouse-glow {
+            position: fixed; width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(16,185,129,0.05) 0%, transparent 60%);
+            border-radius: 50%; pointer-events: none; transform: translate(-50%, -50%); z-index: -1;
+        }
+
+        #progress-bar {
+            position: fixed; top: 0; left: 0; height: 4px;
+            background: var(--emerald); width: 0%; z-index: 1000;
+        }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 80px 30px; }
+        header { text-align: center; margin-bottom: 60px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 40px; }
+        h1 { font-size: 3rem; font-weight: 900; font-style: italic; color: var(--emerald); margin-bottom: 10px; }
+        .subtitle { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--text-muted); }
+
+        .section { margin-bottom: 40px; padding: 30px; background: rgba(255,255,255,0.02); border-radius: 20px; border-left: 4px solid var(--emerald); }
+        h2 { font-size: 1.5rem; color: white; margin-bottom: 20px; display: flex; align-items: center; gap: 15px; }
+        h2 span { background: var(--emerald-dim); color: var(--emerald); padding: 5px 12px; border-radius: 8px; font-size: 0.9rem; }
+        
+        p, li { color: var(--text-muted); margin-bottom: 15px; }
+        ul { padding-left: 20px; margin-bottom: 20px; }
+        li::marker { color: var(--emerald); }
+        strong { color: #e2e8f0; }
+
+        .btn-back {
+            display: flex; align-items: center; justify-content: center; gap: 10px; width: fit-content; margin: 40px auto; padding: 12px 30px;
+            background: rgba(255,255,255,0.05); color: var(--text-main); text-decoration: none; font-size: 0.9rem;
+            font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em;
+            border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); transition: all 0.2s; cursor: none;
+        }
+        .btn-back:hover { background: rgba(255,255,255,0.1); border-color: var(--emerald); color: var(--emerald); }
+    </style>
+</head>
+<body>
+    <div id="progress-bar"></div>
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+    <div class="mouse-glow" id="mouse-glow"></div>
+
+    <div class="container">
+        <header>
+            <h1>Privacy Policy</h1>
+            <p class="subtitle">Effective Date: June 26, 2026</p>
+        </header>
+
+        <div class="section">
+            <h2><span>01</span> Introduction</h2>
+            <p>Welcome to <strong>EcoDrip</strong> ("we," "our," or "us"). At EcoDrip, protecting your privacy is our foundational priority. We operate at the intersection of agricultural hardware, IoT telemetry, and artificial intelligence. This Privacy Policy outlines our strict protocols regarding the collection, transmission, processing, and protection of your personal and agronomic data when you interface with the EcoDrip mobile application, dashboard, and associated hardware modules (the "Services").</p>
+            <p>By connecting your agricultural infrastructure to our Neural Core, you consent to the data practices meticulously detailed in this document.</p>
+        </div>
+
+        <div class="section">
+            <h2><span>02</span> Definitions</h2>
+            <ul>
+                <li><strong>User/Operator:</strong> Any individual or entity that registers, provisions hardware, or utilizes EcoDrip services.</li>
+                <li><strong>IoT Node/Device:</strong> The physical hardware endpoints linked to EcoDrip, including soil moisture probes, temperature sensors, NPK analyzers, water pump relays (e.g., Arduino R4, ESP32), and autonomous valves.</li>
+                <li><strong>Telemetry:</strong> The continuous stream of environmental and operational data transmitted from IoT Nodes to our servers.</li>
+                <li><strong>Neural Core:</strong> The centralized EcoDrip artificial intelligence system responsible for analyzing telemetry and generating the Botanical Advisory.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><span>03</span> Information We Collect</h2>
+            <p>To provide unprecedented precision in smart irrigation, EcoDrip collects a comprehensive array of data:</p>
+            <ul>
+                <li><strong>Personal Identifiers:</strong> Full Name, Email Address, Secure Contact Number, Farm/Garden Name, and precise geographical boundaries of your agricultural zones.</li>
+                <li><strong>Account Credentials:</strong> Encrypted passwords, OAuth tokens (e.g., Google Sign-In), session identifiers, and role-based access levels.</li>
+                <li><strong>Hardware Metadata:</strong> Assigned IP addresses of wireless nodes, MAC addresses, signal strength (RSSI), battery voltages, and solar panel health metrics.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><span>04</span> Information You Provide</h2>
+            <p>We log data that you actively input into the EcoDrip ecosystem. This includes the manual enrollment of crop species, planting dates, custom irrigation schedules, pH thresholds, and manual override commands (e.g., "Instant Boost"). When you initiate a conversation with the AI Botanist, the textual prompts and images you upload for disease diagnosis are explicitly provided by you.</p>
+        </div>
+
+        <div class="section">
+            <h2><span>05</span> Information Collected Automatically</h2>
+            <p>The EcoDrip application operates silently in the background to ensure farm stability. We automatically collect system crash logs, UI interaction heatmaps, latency metrics between the app and your local Arduino modules, and continuous connection state polling. If a node goes offline, the exact timestamp and failure state are recorded.</p>
+        </div>
+
+        <div class="section">
+            <h2><span>06</span> Device Permissions</h2>
+            <p>EcoDrip requires specific hardware permissions to function properly:</p>
+            <ul>
+                <li><strong>Location Services:</strong> Required to fetch hyper-local weather forecasts, calculate the Evapotranspiration (ET) Index, and trigger the "Rain Skip Protocol."</li>
+                <li><strong>Camera/Storage:</strong> Used exclusively when you optical-scan a crop for AI disease diagnosis or upload a profile avatar.</li>
+                <li><strong>Local Network (Wi-Fi/Bluetooth):</strong> Necessary for discovering and provisioning unconfigured IoT nodes on your local farm network.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><span>07</span> Sensor and IoT Data</h2>
+            <p>This is the lifeblood of EcoDrip. We continuously ingest, process, and store live telemetry from your fields. This includes micro-fluctuations in soil moisture percentages, ambient air temperatures, humidity, pH balances, and NPK (Nitrogen, Phosphorus, Potassium) levels. We also track the exact duration your water pumps and solenoid valves remain open to calculate precise water usage statistics.</p>
+        </div>
+
+        <div class="section">
+            <h2><span>08</span> Location Information</h2>
+            <p>Your exact GPS coordinates are utilized solely to interface with third-party meteorological services (such as WeatherAPI or OpenWeatherMap). This allows the Neural Core to preemptively halt irrigation if a rainstorm is detected in your exact micro-climate. We do not track your movement outside of the designated agricultural zones.</p>
+        </div>
+
+        <div class="section">
+            <h2><span>09</span> Camera and Photo Access</h2>
+            <p>Any photographs captured via the "Discovery" or "AI Scan" modules are processed temporarily by our vision-language models (e.g., Google Gemini Vision) to identify botanical pathogens, pest infestations, or nutrient deficiencies. These images are not used to train public AI models and are discarded from active memory after the diagnosis is rendered unless you explicitly save them to a crop's historical log.</p>
+        </div>
+
+        <div class="section">
+            <h2><span>10</span> Payment Information</h2>
+            <p>If you upgrade to EcoDrip Pro for advanced multi-zone capabilities, payment processing is handled entirely by PCI-DSS compliant third parties (e.g., Stripe). EcoDrip's servers never touch, process, or store your raw credit card numbers or banking credentials.</p>
+        </div>
+
+        <div class="section">
+            <h2><span>11</span> How We Use Information</h2>
+            <p>Your telemetry and personal data are strictly utilized to:</p>
+            <ul>
+                <li>Execute autonomous "Auto-Pilot" irrigation cycles based on your specific moisture thresholds.</li>
+                <li>Train your personalized instance of the AI Botanist to understand the unique micro-climate of your farm.</li>
+                <li>Generate daily Health Audits and water conservation reports.</li>
+                <li>Dispatch critical SMS or push notifications during catastrophic events (e.g., bone-dry soil, pump failure, freezing temperatures).</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><span>12</span> AI and Automated Decision Making</h2>
+            <p>EcoDrip leverages sophisticated generative AI and predictive algorithms. When Auto-Pilot is engaged, the system makes autonomous decisions to activate physical high-voltage water pumps based on your data. You acknowledge that AI logic is probabilistic. We log AI decision pathways for debugging, but you have the right to override any automated decision instantly via the Dashboard.</p>
+        </div>
+
+        <div class="section">
+            <h2><span>13</span> Data Sharing</h2>
+            <p>We operate on an absolute Zero-Selling Policy. We will never sell your crop yields, financial data, or hardware configurations to agricultural conglomerates, advertisers, or data brokers. Data is only shared with essential infrastructure partners (e.g., Supabase for database hosting, Vercel for edge computing) required to keep your farm online.</p>
+        </div>
+
+        <div class="section">
+            <h2><span>14</span> Third-Party Services</h2>
+            <p>EcoDrip interfaces with external APIs to enrich your data, including Google Gemini (for botanical intelligence) and WeatherAPI (for atmospheric data). When interacting with these services, we strip personally identifiable information (PII) from the payloads, transmitting only the necessary telemetry (e.g., sending coordinates for weather, not your name).</p>
+        </div>
+
+        <div class="section">
+            <h2><span>15-16</span> Data Storage & Security Measures</h2>
+            <p>Your agricultural blueprint is secured by Supabase. All telemetry is encrypted in transit using TLS 1.3 and at rest using AES-256 encryption. We utilize Row Level Security (RLS) policies within our Postgres database, mathematically guaranteeing that no other EcoDrip user can query or view your node statuses or crop health.</p>
+        </div>
+
+        <div class="section">
+            <h2><span>17-18</span> Data Retention & International Transfers</h2>
+            <p>Historical telemetry (moisture charts, pump logs) is retained for 36 months to allow for year-over-year yield comparisons. If you delete your account, all telemetry is permanently purged from active databases within 72 hours. Data may be routed through global edge servers to ensure the lowest possible latency for pump activation commands.</p>
+        </div>
+
+        <div class="section">
+            <h2><span>19-21</span> Cookies, Tracking & Children's Privacy</h2>
+            <p>EcoDrip uses strictly necessary JWT tokens and local storage to maintain your authentication session and cache weather data to reduce API calls. We do not deploy tracking pixels or cross-site advertising cookies. The EcoDrip platform controls heavy agricultural machinery and is strictly prohibited for use by individuals under the age of 18.</p>
+        </div>
+
+        <div class="section">
+            <h2><span>22-25</span> Your Rights & Contact Information</h2>
+            <p>You maintain full sovereignty over your data. You have the right to export your entire farm's telemetry history in JSON/CSV format at any time. You may request total account annihilation via the Settings terminal. For any privacy concerns, legal inquiries, or data export requests, contact our Data Protection Officer at <strong>support@ecodrip.com</strong>.</p>
+        </div>
+    </div>
+
+    <button class="btn-back" onclick="if(window.history.length > 1) { history.back(); } else { window.close(); }">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"></path><polyline points="12 19 5 12 12 5"></polyline></svg>
+        Back
+    </button>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            document.getElementById('progress-bar').style.width = (winScroll / height) * 100 + '%';
+        });
+
+        const dot = document.getElementById('cursor-dot');
+        const outline = document.getElementById('cursor-outline');
+        const glow = document.getElementById('mouse-glow');
+
+        window.addEventListener('mousemove', (e) => {
+            const posX = e.clientX, posY = e.clientY;
+            dot.style.left = `${posX}px`; dot.style.top = `${posY}px`;
+            outline.animate({ left: `${posX}px`, top: `${posY}px` }, { duration: 150, fill: "forwards" });
+            glow.style.left = `${posX}px`; glow.style.top = `${posY}px`;
+        });
+    </script>
+</body>
+</html>
