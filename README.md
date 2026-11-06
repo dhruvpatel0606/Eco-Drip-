@@ -61,6 +61,10 @@ cp .env.example .env
 npm run dev
 ```
 
+---
+
+## 📂 Project Structure
+
 ```
 Eco-Drip/
 ├── src/lib/          # Core services (AI, Supabase, weather)
