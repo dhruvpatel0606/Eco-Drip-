@@ -25,3 +25,15 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Scratch and development dump files
+all_code.txt
+all_app_code.txt
+docx_output.txt
+docx_output_utf8.txt
+ts_errors.txt
+test_gemini.ts
+test_script.js
+test2.js
+scratch/
+*.apk
